@@ -1,0 +1,79 @@
+/* Promotions Section */
+.promo-section {
+  padding: 80px 0;
+  background-color: var(--bg-color);
+  min-height: calc(100vh - 70px - 60px);
+  margin-top: 70px;
+}
+
+.promo-card {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.promo-badge {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+  border-radius: 0 0 5px 5px;
+}
+
+.promo-card h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.promo-details p {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.redemption-code {
+  background: rgba(245, 166, 35, 0.1);
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px dashed var(--primary-color);
+}
+
+.redemption-code span {
+  display: block;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.redemption-code .code {
+  font-family: monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--text-color);
+}
+
+/* Special styles for different promo types */
+.promo-card.jumbo {
+  border-top: 5px solid #e74c3c;
+}
+
+.promo-card.discount {
+  border-top: 5px solid #2ecc71;
+}

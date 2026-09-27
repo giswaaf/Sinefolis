@@ -1,0 +1,147 @@
+/* Tickets Page Specific Styles */
+.tickets-hero {
+  height: 60vh;
+  min-height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://asset.kompas.com/crops/3RCLTwFB35Bh9cq5BvHSxwyqN3I=/0x0:0x0/750x500/data/photo/buku/630dca2fb40ce.jpg")
+      center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
+  color: white;
+}
+
+.tickets-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.tickets-hero h2 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.movies-list {
+  padding: 60px 0;
+  background-color: var(--bg-color);
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.movie-card {
+  background: var(--secondary-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.movie-poster {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.movie-card:hover .movie-poster img {
+  filter: brightness(0.5);
+}
+
+.buy-ticket {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: var(--transition);
+  opacity: 0;
+  z-index: 2;
+}
+
+.movie-card:hover .buy-ticket {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.movie-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.movie-info h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.movie-info p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .movie-poster {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .movie-poster {
+    height: 250px;
+  }
+
+  .movie-info {
+    padding: 15px;
+  }
+
+  .movie-info h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tickets-hero {
+    height: 50vh;
+    min-height: 300px;
+  }
+}
